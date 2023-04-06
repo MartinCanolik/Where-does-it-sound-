@@ -61,7 +61,7 @@ const UserForm = () => {
                                     htmlFor="firstName"
                                     className="block tracking-wide text-white text-s font-bold mb-2"
                                 >
-                                    Nombre
+                                    Name
                                 </label>
                                 <Field
                                     type="text"
@@ -86,7 +86,7 @@ const UserForm = () => {
                                     htmlFor="lastName"
                                     className="block tracking-wide text-white text-s font-bold mb-2"
                                 >
-                                    Apellido
+                                    Last Name
                                 </label>
                                 <Field
                                     type="text"
@@ -139,7 +139,7 @@ const UserForm = () => {
                                 htmlFor="dni"
                                 className="block tracking-wide text-white text-s font-bold mb-2"
                             >
-                                Documento
+                                DNI
                             </label>
                             <Field
                                 type="text"
@@ -165,7 +165,7 @@ const UserForm = () => {
                                     htmlFor="password"
                                     className="block tracking-wide text-white text-s font-bold mb-2"
                                 >
-                                    Contraseña
+                                    Password
                                 </label>
                                 <Field
                                     type="password"
@@ -190,7 +190,7 @@ const UserForm = () => {
                                     htmlFor="password2"
                                     className="block tracking-wide text-white text-s font-bold mb-2"
                                 >
-                                    Confirmar Contraseña
+                                    Confirm Password
                                 </label>
                                 <Field
                                     type="password"
@@ -217,7 +217,7 @@ const UserForm = () => {
                                     htmlFor="phone"
                                     className="block tracking-wide text-white text-s font-bold mb-2"
                                 >
-                                    Número Telefónico
+                                    Phone Number
                                 </label>
                                 <Field
                                     type="text"
@@ -242,7 +242,7 @@ const UserForm = () => {
                                     htmlFor="name"
                                     className="block tracking-wide text-white text-s font-bold mb-2"
                                 >
-                                    Fecha de nacimiento
+                                    Birthday
                                 </label>
                                 <Field
                                     type="date"
@@ -267,14 +267,14 @@ const UserForm = () => {
                                 htmlFor="image"
                                 className="flex items-center tracking-wide text-white text-s font-bold mb-2"
                             >
-                                Foto de Perfil
+                                Profile Picture
                                 {loading ? (
                                     <span className="text-customRed italic pl-1 text-xs font-semibold">
-                                        (Subiendo Imágen...)
+                                        ( uploading image...)
                                     </span>
                                 ) : success ? (
                                     <span className="text-green-500 italic pl-1 text-xs font-semibold">
-                                        (Imágen subida con éxito)
+                                        ( Image uploaded successfully)
                                     </span>
                                 ) : null}
                             </label>
@@ -306,7 +306,7 @@ const UserForm = () => {
                                     href="#"
                                     className="inline-block align-baseline font-bold text-m text-gray-400 hover:text-customRed"
                                 >
-                                    Terminos y Condiciones
+                                    Terms and Conditions
                                 </a>
                             </label>
 
@@ -329,7 +329,7 @@ const UserForm = () => {
                                 disabled={isSubmitting}
                                 className="bg-customRed hover:bg-customGray text-white font-bold py-2 px-8 rounded border-2 border-transparent focus:outline-none focus:shadow-outline hover:text-customRed hover:border-customRed mt-3 mb-3"
                             >
-                                Enviar
+                                Submit
                             </button>
                         </div>
                     </Form>

@@ -235,25 +235,25 @@ const EventDetail = () => {
                             </div>
                             <p className="leading-relaxed">
                                 <span className="font-bold mr-2">
-                                    ⏰ Hora de Inicio:
+                                    ⏰ Start Time:
                                 </span>
                                 {detail.start}
                             </p>
                             <p className="leading-relaxed">
                                 <span className="font-bold mr-2">
-                                    ⏰ Hora de Finalización:
+                                    ⏰ Finish Time:
                                 </span>
                                 {detail.end}
                             </p>
                             <p className="leading-relaxed">
                                 <span className="font-bold mr-2">
-                                    💵 Valor de entrada:
+                                    💵 Price:
                                 </span>
                                 {detail.price}$
                             </p>
                             <p className="leading-relaxed">
                                 <span className="font-bold mr-2">
-                                    🎫 Entradas disponibles:
+                                    🎫 Tickets available:
                                 </span>
                                 {ticketsAvailable}
                             </p>
@@ -310,7 +310,7 @@ const EventDetail = () => {
                                               })}
                                     >
                                         <p className="font-bold uppercase">
-                                            Comprar
+                                            Buy Tickets
                                         </p>
                                     </button>
                                 }
@@ -332,7 +332,7 @@ const EventDetail = () => {
                                         ) : (
                                             <div className="flex items-center">
                                                 <span className="text-customRed italic pl-1 text-xs font-semibold">
-                                                    (Generando la orden...)
+                                                    ( Generating payment...)
                                                 </span>
                                             </div>
                                         )
@@ -373,7 +373,7 @@ const EventDetail = () => {
                                     onClick={() => navigate("/")}
                                     className=" text-white bg-customRed border-0 py-3 px-6 focus:outline-none hover:bg-red-500 rounded uppercase font-bold"
                                 >
-                                    Regresar
+                                    Back...
                                 </button>
                             </div>
                         </div>

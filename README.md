@@ -1,51 +1,44 @@
 ![HenryLogo](https://d31uz8lwfmyn8g.cloudfront.net/Assets/logo-henry-white-lg.png)
 
-# DondeSuena - Proyecto Final
+# Where does it sound? - Final Project
 
 <p align="right">
   <img height="150" src="./Proyecto_Grupal_Logo.png" />
 </p>
 
-## Resumen
+## Summary
 
-El objetivo principal de este sitio web es poder visualizar propuestas de espectáculos musicales en tu ciudad más cercana y poder comprar entradas de tus bandas/artistas favoritos. Así también, brindar la posibilidad de que artistas puedan crear eventos de sus próximos shows e interactuar a través de publicaciones con sus seguidores, _contribuyendo de esta manera al crecimiento profesional de cada artista y de la comunidad dentro del sitio_.
+The main objective of this website is to be able to view proposals for music shows in your nearest city and be able to buy tickets for your favorite bands/artists. Additionally, it provides the possibility for artists to create events for their upcoming shows and interact with their followers through posts, thereby contributing to the professional growth of each artist and the community within the site.
 
-## Funcionalidades
+## functionalities
 
-### Como Usuario No Logeado:
+### Unsubscribed User:
 
-- Registrarme como usuario o artista.
-- Ver el Home de la página (eventos, artistas, etc).
-- Ver los próximos shows y detalles del mismo (búsqueda, filtrados y ordenamientos).
-- Ver artistas y el perfil de cada artista.
-- Ver las publicaciones de los artistas.
-- Acceder al chatbot Q&A.
+- Register as a user or artist.
+- View the Home page (events, artists, etc.).
+- View upcoming shows and their details (search, filtering, and sorting).
+- View artists and the profile of each artist.
 
-### Como Usuario Logeado:
+### Susbcribed User:
 
-- Puedo realizar todo lo que el usuario no logeado puede hacer.
-- Login/Logout con la cuenta creada o google.
-- Comprar entradas de los eventos de los artistas mediante pasarela de pago (Mercado Pago).
-- Comentar las publicaciones de los artistas.
-- Agendar eventos y/o marcar como favoritos mis artistas preferidos.
-- Acceder al chatbot Q&A.
+- access all the features that the non-subscribed user cannot.
+- Login/Logout with the created account or google.
+- Buy tickets for events through a payment gateway (Mercado Pago).
+- Schedule events and/or bookmark my favorite artists.
 
-### Como Artista:
+### Artist:
 
-- Login/Logout con la cuenta creada o google.
-- Crear un perfil que contenga mis datos como artista (nombre, género, correo, contraseña, etc).
-- Crear un evento futuro a través de un formulario.
-- Crear publicaciones para interactuar con mis seguidores (imagen, descripción, recibir comentarios), eliminarlo y editarlo.
-- Acceder al chatbot Q&A.
+- Login/Logout with the created account or google.
+- Create a profile that contains their data as an artist (name, gender, email, password, photo etc).
+- Create an event through a form.
 
-### Administrador
+### Administrator
 
-- Banear/Desbanear usuarios.
-- Puedo modificar/eliminar publicaciones de los artistas.
-- Guardar en base de datos bares/lugares que se agreguen en la página.
-- Puedo eliminar eventos que los artistas soliciten eliminar.
-- Ver el registro de los usuarios que compren las entradas y ver detalladamente la información de cada uno.
-- Acceder al chatbot Q&A y modificarlo.
+- Ban/Unban users.
+- I can modify/delete posts from the artists.
+- Save in database bars/locations that are added to the page.
+- I can delete events that artists request to delete.
+- View the record of users who purchase tickets and see detailed information for each one.
 
 ## Tecnologías usadas
 

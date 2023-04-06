@@ -139,7 +139,7 @@ const EventCreation = () => {
                             htmlFor="name"
                             className="block tracking-wide text-white text-s font-bold mb-2"
                         >
-                            Nombre
+                            Name
                             {errors.name && touched.name ? (
                                 <span className="text-customRed italic pl-1 text-xs font-semibold">
                                     {errors.name}
@@ -165,7 +165,7 @@ const EventCreation = () => {
                             htmlFor="date"
                             className="block tracking-wide text-white text-s font-bold mb-2"
                         >
-                            Fecha
+                            Date
                             {errors.date && touched.date ? (
                                 <span className="text-customRed italic pl-1 text-xs font-semibold">
                                     {errors.date}
@@ -192,7 +192,7 @@ const EventCreation = () => {
                             htmlFor="start"
                             className="block tracking-wide text-white text-s font-bold mb-2"
                         >
-                            Hora de Inicio
+                            Initial time
                             {errors.start && touched.start ? (
                                 <span className="text-customRed italic pl-1 text-xs font-semibold">
                                     {errors.start}
@@ -217,7 +217,7 @@ const EventCreation = () => {
                             htmlFor="end"
                             className="block tracking-wide text-white text-s font-bold mb-2"
                         >
-                            Hora de Finalización
+                            Ending time
                             {errors.end && touched.end ? (
                                 <span className="text-customRed italic pl-1 text-xs font-semibold">
                                     {errors.end}
@@ -243,7 +243,7 @@ const EventCreation = () => {
                         htmlFor="address"
                         className="block tracking-wide text-white text-s font-bold mb-2"
                     >
-                        Locación
+                        Location
                         {/* {errors.address ? (
                             <span className="text-customRed italic pl-1 text-xs font-semibold">
                                 {errors.address}
@@ -257,12 +257,15 @@ const EventCreation = () => {
                         className="rounded py-2 pl-3 w-full focus:outline-none bg-gray-200 focus:bg-white"
                     >
                         <option value="" disabled>
-                            Lugares Disponibles
+                            places Available
                         </option>
                         {places.length > 0 &&
                             places.map((place, key) => {
                                 return (
-                                    <option key={key} value={`${place.city}*${place.address}`}>
+                                    <option
+                                        key={key}
+                                        value={`${place.city}*${place.address}`}
+                                    >
                                         {`${place.name}`}
                                     </option>
                                 );
@@ -275,7 +278,7 @@ const EventCreation = () => {
                             htmlFor="genres"
                             className="block tracking-wide text-white text-s font-bold mb-2"
                         >
-                            Géneros
+                            Genders
                         </label>
                         <select
                             name="genres"
@@ -288,7 +291,7 @@ const EventCreation = () => {
                             className="rounded py-2 pl-3 w-full focus:outline-none bg-gray-200 focus:bg-white"
                         >
                             <option value="" disabled>
-                                Géneros Disponibles
+                                Genders available
                             </option>
                             {genres.length > 0 &&
                                 genres.map((genre, key) => {
@@ -332,7 +335,7 @@ const EventCreation = () => {
                             htmlFor="quotas"
                             className="block tracking-wide text-white text-s font-bold mb-2"
                         >
-                            Entradas Disponibles
+                            Tickets available
                             {errors.quotas && touched.quotas ? (
                                 <span className="text-customRed italic pl-1 text-xs font-semibold">
                                     {errors.quotas}
@@ -359,7 +362,7 @@ const EventCreation = () => {
                             htmlFor="price"
                             className="block tracking-wide text-white text-s font-bold mb-2"
                         >
-                            Precio
+                            Price
                             {errors.price && touched.price ? (
                                 <span className="text-customRed italic pl-1 text-xs font-semibold">
                                     {errors.price}
@@ -387,7 +390,7 @@ const EventCreation = () => {
                         htmlFor="description"
                         className="block tracking-wide text-white text-s font-bold mb-2"
                     >
-                        Descripción
+                        Description
                         {errors.description && touched.description ? (
                             <span className="text-customRed italic pl-1 text-xs font-semibold">
                                 {errors.description}
@@ -415,7 +418,7 @@ const EventCreation = () => {
                             htmlFor="phone"
                             className="flex items-center tracking-wide text-white text-s font-bold mb-2"
                         >
-                            Teléfono del Organizador
+                            Mannager Phone
                             {errors.phone && touched.phone ? (
                                 <span className="text-customRed italic pl-1 text-xs font-semibold">
                                     {errors.phone}
@@ -441,14 +444,14 @@ const EventCreation = () => {
                             htmlFor="image"
                             className="flex items-center tracking-wide text-white text-s font-bold mb-2"
                         >
-                            Póster Publicitario
+                            advertising poster
                             {loading ? (
                                 <span className="text-customRed italic pl-1 text-xs font-semibold">
-                                    (Subiendo Imágen...)
+                                    (Uploading image...)
                                 </span>
                             ) : success ? (
                                 <span className="text-green-500 italic pl-1 text-xs font-semibold">
-                                    (Imágen subida con éxito)
+                                    (Image uploaded successfully!)
                                 </span>
                             ) : null}
                         </label>
@@ -462,26 +465,29 @@ const EventCreation = () => {
                         />
                     </div>
                 </div>
-                { image ?
+                {image ? (
                     <div className="flex flex-col gap-4 w-full h-96 px-3">
-                        <p
-                            className="uppercase text-white font-bold"
-                        >Preview Póster Publicitario</p>
-                        <img src={image} className="w-full h-full border-2 object-cover"/>
-                    </div> : null
-                }
+                        <p className="uppercase text-white font-bold">
+                            Preview advertising
+                        </p>
+                        <img
+                            src={image}
+                            className="w-full h-full border-2 object-cover"
+                        />
+                    </div>
+                ) : null}
                 <div className="flex flex-col items-center">
                     <div className="flex flex-row-reverse items-center justify-center gap-2">
                         <label
                             htmlFor="agreeTerms"
                             className="block tracking-wide text-white text-s font-bold"
                         >
-                            Acepto los{" "}
+                            I accept all the{" "}
                             <a
                                 href="#"
                                 className="inline-block align-baseline font-bold text-m text-gray-400 hover:text-customRed"
                             >
-                                Terminos y Condiciones
+                                Terms And Conditions
                             </a>
                         </label>
                         <input
@@ -506,7 +512,7 @@ const EventCreation = () => {
                         disabled={!success || genreEmpty}
                         className="bg-customRed hover:bg-customGray text-white font-bold py-2 px-4 rounded border-2 border-transparent focus:outline-none focus:shadow-outline hover:text-customRed hover:border-customRed mt-4 disabled:opacity-5"
                     >
-                        Crear Evento
+                        Create Event
                     </button>
                 </div>
             </form>

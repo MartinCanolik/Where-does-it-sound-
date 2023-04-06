@@ -73,7 +73,7 @@ export const ArtistProfile = () => {
                                     1,360
                                 </span>
                                 <span className="text-sm text-slate-400">
-                                    Publicaciones
+                                    Posts
                                 </span>
                             </div>
                         </div>
@@ -118,13 +118,13 @@ export const ArtistProfile = () => {
                                 className="cursor-pointer bg-red-500 hover:bg-red-800 rounded-lg py-2 mr-3 px-5 text-white"
                                 onClick={() => navigate("/create/event")}
                             >
-                                Crear Evento ⭐
+                                Create Event ⭐
                             </button>
                             <button
                                 className="cursor-pointer bg-red-500 hover:bg-red-800 rounded-lg py-2 ml-3 px-5 text-white"
                                 onClick={() => dispatch(setPostvarModal())}
                             >
-                                Crear Publicacion ⭐
+                                Create Post ⭐
                             </button>
                         </div>
                     ) : (
@@ -134,7 +134,7 @@ export const ArtistProfile = () => {
                             }
                             onClick={(e) => handleAddFav(e)}
                         >
-                            Agregar a Favoritos ⭐
+                            Add to Favourites ⭐
                         </button>
                     )}
                 </div>

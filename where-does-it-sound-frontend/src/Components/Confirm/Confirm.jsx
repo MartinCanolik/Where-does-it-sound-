@@ -25,7 +25,7 @@ const Confirm = () => {
         <div className="min-h-screen bg-event flex flex-col items-center justify-center py-20">
             <div>
                 <h3 className="text-3xl font-semibold text-white capitalize mb-10 lg:text-4l">
-                    Redireccionando...
+                    Redirecting...
                 </h3>
             </div>
             <div>

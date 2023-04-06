@@ -26,7 +26,7 @@ export default function DropdownGenreFilter() {
                     src="https://res.cloudinary.com/ds41xxspf/image/upload/v1668097753/Donde-Suena-Assets/Henry_Proyecto_Grupal_G%C3%A9nero_j8vpju.png"
                     alt="genresIcon"
                 />
-                <span className="font-semibold flex-1">Género</span>
+                <span className="font-semibold flex-1">Gender</span>
                 <span>
                     <svg
                         className="fill-current h-4 w-4 transform group-hover:-rotate-180 transition duration-300 ease-in-out"

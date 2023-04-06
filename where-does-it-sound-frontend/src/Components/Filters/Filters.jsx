@@ -74,7 +74,7 @@ function FilterBar() {
                             dispatch(setCombinedFilters());
                         }}
                     >
-                        Limpiar Filtros
+                        Clear Filters
                     </h1>
                 </li>
                 <li className="flex items-center mr-10">

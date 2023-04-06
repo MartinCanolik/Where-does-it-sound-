@@ -87,7 +87,7 @@ const UserFavorites = () => {
             ) : (
                 <div className="flex flex-col m-5 w-1/2 h-fit p-8 items-center justify-center overflow-hidden rounded-3xl backdrop-blur-xl shadow-2xl border border-transparent hover:border-white transition duration-500 ease-in-out">
                     <p className="text-center text-white italic">
-                        No tienes Artistas Favoritos
+                        You have no Favorite Artists
                     </p>
                 </div>
             )}

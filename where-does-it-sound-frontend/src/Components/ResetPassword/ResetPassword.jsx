@@ -1,7 +1,10 @@
 import React from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import { useDispatch } from "react-redux";
-import { logOut, resetPassword } from "../../Redux/Slices/Session/sessionActions";
+import {
+    logOut,
+    resetPassword,
+} from "../../Redux/Slices/Session/sessionActions";
 import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
@@ -23,8 +26,7 @@ const ResetPassword = () => {
                     if (!values.password) {
                         errors.password = "Required";
                     } else if (values.password.length < 6) {
-                        errors.password =
-                            "Al menos debe tener 6 caracteres";
+                        errors.password = "Al menos debe tener 6 caracteres";
                     }
                     if (!values.confirmPassword) {
                         errors.confirmPassword = "Requerido";
@@ -43,7 +45,7 @@ const ResetPassword = () => {
                 {({ isSubmitting, errors }) => (
                     <Form className="w-full max-w-2xl bg-customGray p-4 flex flex-col justify-center items-center gap-2 my-8 rounded-xl">
                         <h4 className="text-3xl uppercase font-bold text-customYellow text-white">
-                            Cambia tu contraseña
+                            Change Password
                         </h4>
                         <div className="flex flex-wrap w-full justify-center">
                             <div className="w-full md:w-1/2 px-3">
@@ -51,7 +53,7 @@ const ResetPassword = () => {
                                     htmlFor="password"
                                     className="block tracking-wide text-white text-s font-bold mb-2"
                                 >
-                                    Nueva contraseña
+                                    New password
                                 </label>
                                 <Field
                                     type="password"
@@ -75,7 +77,7 @@ const ResetPassword = () => {
                                     htmlFor="confirmPassword"
                                     className="block tracking-wide text-white text-s font-bold mb-2"
                                 >
-                                    Confirma tu contraseña
+                                    Confirm your password
                                 </label>
                                 <Field
                                     type="password"
@@ -100,7 +102,7 @@ const ResetPassword = () => {
                                 type="submit"
                                 disabled={isSubmitting}
                             >
-                                Cambiar
+                                Update
                             </button>
                         </div>
                     </Form>

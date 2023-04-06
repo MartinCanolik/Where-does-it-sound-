@@ -121,10 +121,9 @@ export const PostVar = () => {
                             />
                             {loading ? (
                                 <span className="text-customRed italic pl-1 text-xs font-semibold">
-                                    (Subiendo Archivo)
+                                    ( Uploading File...)
                                 </span>
                             ) : success ? (
-
                                 <div class="w-96 h-96">
                                     {image.includes(".mp4") && (
                                         <video
@@ -138,13 +137,13 @@ export const PostVar = () => {
                                             />
                                         </video>
                                     )}
-                                    {!image.includes(".mp4") && 
-
-                                    <img
-                                        className="w-full h-full rounded-lg object-cover"
-                                        altName="Preview"
-                                        src={image}
-                                    />}
+                                    {!image.includes(".mp4") && (
+                                        <img
+                                            className="w-full h-full rounded-lg object-cover"
+                                            altName="Preview"
+                                            src={image}
+                                        />
+                                    )}
                                 </div>
                             ) : null}
                         </div>
@@ -152,7 +151,7 @@ export const PostVar = () => {
                             className="px-6 py-2 border-2 border-customRed text-customRed font-bold italic leading-tight uppercase rounded-full hover:bg-black focus:outline-none focus:ring-0 transition duration-200 ease-in-out mt-5"
                             type="submit"
                         >
-                            Publicar
+                            Publishing
                         </button>
                     </form>
                 </div>

@@ -17,14 +17,10 @@ const UserEditForm = () => {
     const { user } = useSelector((state) => state.sessionState);
     const [id] = useState(user.uid ? user.uid : user.id);
 
-    function navegar() {
-        navigate("/");
-    }
-
     const onSubmit = (values, actions) => {
         const formValues = {
             ...values,
-            image: image
+            image: image,
         };
         try {
             dispatch(editUserForm(formValues, id));
@@ -51,7 +47,6 @@ const UserEditForm = () => {
         setLoading(false);
     };
 
-
     const { values, errors, touched, handleBlur, handleChange, handleSubmit } =
         useFormik({
             initialValues: {
@@ -67,7 +62,14 @@ const UserEditForm = () => {
     return (
         <div className="h-full w-full flex flex-col items-center justify-center bg-customGray font-source-sans rounded-3xl">
             <div className="flex border-2 bg-gray-400 w-52 h-52 items-center justify-center rounded-full overflow-hidden mt-8">
-                <img src={user.image || "https://res.cloudinary.com/ds41xxspf/image/upload/v1669140075/Donde-Suena-Assets/user_snefch.png"} className="object-cover w-full h-full" alt="" />
+                <img
+                    src={
+                        user.image ||
+                        "https://res.cloudinary.com/ds41xxspf/image/upload/v1669140075/Donde-Suena-Assets/user_snefch.png"
+                    }
+                    className="object-cover w-full h-full"
+                    alt=""
+                />
             </div>
             <form
                 onSubmit={handleSubmit}
@@ -105,7 +107,7 @@ const UserEditForm = () => {
                         htmlFor="dni"
                         className="block tracking-wide text-white text-s font-bold mb-2"
                     >
-                        Documento
+                        Document
                         {errors.dni && touched.dni ? (
                             <span className="text-customRed italic pl-1 text-xs font-semibold">
                                 {errors.dni}
@@ -115,7 +117,6 @@ const UserEditForm = () => {
                     <input
                         id="dni"
                         type="dni"
-                        
                         placeholder={`Escribe tu DNI`}
                         value={values.dni}
                         onChange={handleChange}
@@ -132,7 +133,7 @@ const UserEditForm = () => {
                         htmlFor="dni"
                         className="block tracking-wide text-white text-s font-bold mb-2"
                     >
-                        Fecha de nacimiento
+                        Birthday
                         {errors.birthday && touched.birthday ? (
                             <span className="text-customRed italic pl-1 text-xs font-semibold">
                                 {errors.birthday}
@@ -142,7 +143,6 @@ const UserEditForm = () => {
                     <input
                         id="birthday"
                         type="birthday"
-                        
                         placeholder={`Fecha de nacimiento`}
                         value={values.birthday}
                         onChange={handleChange}
@@ -243,7 +243,7 @@ const UserEditForm = () => {
                             htmlFor="phone"
                             className="flex items-center tracking-wide text-white text-s font-bold mb-2"
                         >
-                            Número Telefónico
+                            Phone Number
                             {errors.phone && touched.phone ? (
                                 <span className="text-customRed italic pl-1 text-xs font-semibold">
                                     {errors.phone}
@@ -269,7 +269,7 @@ const UserEditForm = () => {
                             htmlFor="image"
                             className="flex items-center tracking-wide text-white text-s font-bold mb-2"
                         >
-                            Foto de Perfil
+                            Profile Picture
                             {loading ? (
                                 <span className="text-customRed italic pl-1 text-xs font-semibold">
                                     (Subiendo Imágen...)
@@ -296,7 +296,7 @@ const UserEditForm = () => {
                         type="submit"
                         className="bg-customRed hover:bg-customGray text-white font-bold py-2 px-4 rounded border-2 border-transparent focus:outline-none focus:shadow-outline hover:text-customRed hover:border-customRed mt-4 disabled:opacity-5"
                     >
-                        Actualizar
+                        Update
                     </button>
                 </div>
             </form>

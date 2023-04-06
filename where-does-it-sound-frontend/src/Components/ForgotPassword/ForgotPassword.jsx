@@ -34,7 +34,7 @@ const ForgotPassword = () => {
                 {({ isSubmitting, errors }) => (
                     <Form className="w-full max-w-2xl bg-customGray p-8 flex flex-col justify-center items-center gap-4 rounded-xl">
                         <h4 className="text-3xl font-bold text-white uppercase">
-                            Recupera tu contraseña
+                            Recover your password
                         </h4>
                         <div className="flex flex-wrap w-full justify-evenly items-center">
                             <div className="w-full md:w-1/2 px-3">

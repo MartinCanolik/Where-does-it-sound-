@@ -126,7 +126,7 @@ function Navbar() {
                                     }
                                     alt="account icon"
                                 />
-                                <a>Mi Cuenta</a>
+                                <a>My Profile</a>
                             </div>
                         ) : (
                             <div className="menu-container" ref={menuRef}>

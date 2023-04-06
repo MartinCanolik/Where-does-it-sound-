@@ -45,19 +45,19 @@ const Home = () => {
                 <div className="flex flex-wrap py-10">
                     <div className="w-1/6 max-h-screen flex flex-col items-center pt-20 gap-8">
                         <h3 className="text-xl font-semibold text-customGray uppercase italic lg:text-2xl text-center">
-                            Todos los Artistas
+                            Artists
                         </h3>
                         <ArtistsSection />
                     </div>
                     <div className="w-4/6 flex flex-col items-center rounded-3xl bg-gray-100 pt-8 gap-8">
                         <h2 className="text-3xl font-semibold text-customGray uppercase lg:text-5xl text-center">
-                            Próximos Eventos
+                            Upcomming Events
                         </h2>
                         <Events />
                     </div>
                     <div className="w-1/6 max-h-20 flex flex-col items-center pt-20 gap-8">
                         <h3 className="text-xl font-semibold text-customGray uppercase italic lg:text-2xl text-center">
-                            Talento Emergente
+                            Emerging Talent
                         </h3>
                         <ArtistsSection />
                     </div>

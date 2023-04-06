@@ -124,7 +124,7 @@ const Login = () => {
                     <Form className="relative w-full mx-auto max-w-2xl bg-customGray p-4 flex flex-col justify-center items-center gap-2 my-8 rounded">
                         {location.pathname !== "/" && (
                             <h1 className="block tracking-wide text-white text-s font-bold mb-2 pt-5">
-                                Debes iniciar sesion para continuar..
+                                Sign up to continue..
                             </h1>
                         )}
                         <div className="absolute right-8 top-5">
@@ -192,7 +192,7 @@ const Login = () => {
                                 className="inline-block align-baseline font-bold text-xs text-gray-400 hover:text-customRed"
                             >
                                 <Link to="/forgotPassword">
-                                    Olvidaste tu contraseña?
+                                    Did you forget your password?
                                 </Link>
                             </span>
                         </div>
@@ -207,14 +207,14 @@ const Login = () => {
                         <div className="flex flex-wrap justify-between w-full px-3">
                             <div onClick={() => setLoginType(!loginType)}>
                                 <span className="gap-2 font-bold text-m text-gray-400 hover:text-gray-500 cursor-pointer">
-                                    Aun no estas registrado?
+                                    Are you not subscribed yet?
                                 </span>
                             </div>
                             <div
                                 onClick={handleSignIN}
                                 className="flex flex-wrap gap-2 font-bold text-m text-gray-400 hover:text-gray-500 cursor-pointer"
                             >
-                                <span>Iniciar sesion con Google</span>
+                                <span>Sign up with google</span>
 
                                 <FcGoogle size={"1.5em"} />
                             </div>
@@ -240,7 +240,7 @@ const Login = () => {
                                             />
                                         </div>
                                         <h3 className="block tracking-wide text-white text-s font-bold mb-2">
-                                            Artista
+                                            Artist
                                         </h3>
                                     </div>
                                     <div
@@ -256,7 +256,7 @@ const Login = () => {
                                             alt="Manito"
                                         />
                                         <h3 className="block tracking-wide text-white text-s font-bold mb-2">
-                                            Publico
+                                            Public
                                         </h3>
                                     </div>
                                 </div>

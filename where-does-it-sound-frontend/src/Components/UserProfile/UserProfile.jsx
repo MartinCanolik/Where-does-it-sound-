@@ -7,7 +7,11 @@ import { getUserById } from "../../Redux/Slices/User/userAction";
 import UserEditForm from "../UserEdit/UserEdit";
 import UserFavorites from "../UserFavorites/UserFavorites";
 import MyShopping from "../MyShopping/MyShopping";
-import { deleteUser, forgotPassword, logOut } from "../../Redux/Slices/Session/sessionActions";
+import {
+    deleteUser,
+    forgotPassword,
+    logOut,
+} from "../../Redux/Slices/Session/sessionActions";
 import Swal from "sweetalert2";
 import { useNavigate } from "react-router-dom";
 
@@ -68,49 +72,49 @@ export default function UserProfile() {
 
     const confirmDeletion = () => {
         Swal.fire({
-            title: '¿Seguro quieres eliminar tu cuenta?',
+            title: "¿Seguro quieres eliminar tu cuenta?",
             text: "Este cambio no se podrá revertir!",
-            icon: 'warning',
+            icon: "warning",
             showCancelButton: true,
-            confirmButtonColor: '#3085d6',
-            cancelButtonColor: '#d33',
-            confirmButtonText: 'Sí, elimínala!',
-            cancelButtonText: 'Cancelar'
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Sí, elimínala!",
+            cancelButtonText: "Cancelar",
         }).then((result) => {
             if (result.isConfirmed) {
-                dispatch(deleteUser(userId.id?userId.id:userId.id));
+                dispatch(deleteUser(userId.id ? userId.id : userId.id));
                 Swal.fire(
-                    'Cuenta Eliminada!',
-                    'Te vamos a extrañar :(',
-                    'success'
-                )
+                    "Cuenta Eliminada!",
+                    "Te vamos a extrañar :(",
+                    "success"
+                );
                 setTimeout(navigate("/"), 3000);
             }
-        })
+        });
     };
 
     const confirmChangePassword = () => {
         Swal.fire({
-            title: '¿Seguro quieres cambiar la contraseña?',
+            title: "¿Seguro quieres cambiar la contraseña?",
             text: "Si confirmas se cerrará la sesión",
-            icon: 'warning',
+            icon: "warning",
             showCancelButton: true,
-            confirmButtonColor: '#3085d6',
-            cancelButtonColor: '#d33',
-            confirmButtonText: 'Sí, quiero cambiarla!',
-            cancelButtonText: 'Cancelar'
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Sí, quiero cambiarla!",
+            cancelButtonText: "Cancelar",
         }).then((result) => {
             if (result.isConfirmed) {
                 dispatch(logOut());
-                dispatch(forgotPassword({email: userId.email}));
+                dispatch(forgotPassword({ email: userId.email }));
             }
-        })
+        });
     };
 
     const handleEdit = () => {
         setEditInfo(!editInfo);
     };
-    const handleChangePassword = () =>{
+    const handleChangePassword = () => {
         confirmChangePassword();
     };
     const handleDeleteAccount = () => {
@@ -126,7 +130,7 @@ export default function UserProfile() {
                     onClick={handleEdit}
                     className="text-lg text-white italic font-semibold bg-customRed px-4 rounded-xl border-4 border-transparent hover:bg-white hover:text-customRed hover:border-customRed transition duration-700 ease-in-out"
                 >
-                    Editar Datos
+                    Edit Information
                 </button>
                 <div className="flex gap-10">
                     <button
@@ -134,14 +138,14 @@ export default function UserProfile() {
                         onClick={handleChangePassword}
                         className="text-lg text-white italic font-semibold bg-customRed px-4 rounded-xl border-4 border-transparent hover:bg-white hover:text-customRed hover:border-customRed transition duration-500 ease-in-out"
                     >
-                        Cambiar Contraseña
+                        Change Password
                     </button>
                     <button
                         type="button"
                         onClick={handleDeleteAccount}
                         className="text-lg text-white italic font-semibold bg-black px-4 rounded-xl border-4 border-transparent hover:bg-white hover:text-customRed hover:border-customRed transition duration-1000 ease-in-out"
                     >
-                        Borrar Cuenta
+                        Delete Account
                     </button>
                 </div>
             </div>
